@@ -1,62 +1,44 @@
 [
   {
-    "role": "user",
+    "role": "admin",
     "resource": "User",
     "action": "read:own",
     "attributes": "*"
   },
   {
-    "role": "guest",
-    "resource": "User",
-    "action": "read:own",
-    "attributes": "*"
-  },
-  {
-    "role": "user",
+    "role": "admin",
     "resource": "User",
     "action": "create:any",
     "attributes": "*"
   },
   {
-    "role": "guest",
-    "resource": "User",
-    "action": "create:any",
-    "attributes": "*"
-  },
-  {
-    "role": "user",
+    "role": "admin",
     "resource": "User",
     "action": "update:any",
     "attributes": "*"
   },
   {
-    "role": "guest",
-    "resource": "User",
-    "action": "update:any",
-    "attributes": "*"
-  },
-  {
-    "role": "user",
+    "role": "admin",
     "resource": "User",
     "action": "delete:any",
     "attributes": "*"
   },
   {
-    "role": "guest",
-    "resource": "User",
-    "action": "delete:any",
-    "attributes": "*"
-  },
-  {
-    "role": "user",
+    "role": "admin",
     "resource": "User",
     "action": "read:any",
     "attributes": "*"
   },
   {
     "role": "guest",
-    "resource": "User",
-    "action": "read:any",
+    "resource": "Order",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "read:own",
     "attributes": "*"
   },
   {
@@ -66,13 +48,31 @@
     "attributes": "*"
   },
   {
-    "role": "guest",
+    "role": "salesperson",
     "resource": "Order",
     "action": "read:own",
     "attributes": "*"
   },
   {
+    "role": "guest",
+    "resource": "Order",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
     "role": "user",
+    "resource": "Order",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesperson",
     "resource": "Order",
     "action": "create:any",
     "attributes": "*"
@@ -80,7 +80,13 @@
   {
     "role": "guest",
     "resource": "Order",
-    "action": "create:any",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "update:any",
     "attributes": "*"
   },
   {
@@ -90,9 +96,21 @@
     "attributes": "*"
   },
   {
-    "role": "guest",
+    "role": "salesperson",
     "resource": "Order",
     "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "guest",
+    "resource": "Order",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "delete:any",
     "attributes": "*"
   },
   {
@@ -102,9 +120,21 @@
     "attributes": "*"
   },
   {
-    "role": "guest",
+    "role": "salesperson",
     "resource": "Order",
     "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "guest",
+    "resource": "Order",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "read:any",
     "attributes": "*"
   },
   {
@@ -114,49 +144,67 @@
     "attributes": "*"
   },
   {
-    "role": "guest",
+    "role": "salesperson",
     "resource": "Order",
     "action": "read:any",
     "attributes": "*"
   },
   {
-    "role": "user",
-    "resource": "Product",
-    "action": "read:own",
-    "attributes": "*"
-  },
-  {
     "role": "guest",
     "resource": "Product",
     "action": "read:own",
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "Product",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
     "role": "user",
+    "resource": "Product",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "salesperson",
+    "resource": "Product",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
     "resource": "Product",
     "action": "create:any",
     "attributes": "*"
   },
   {
-    "role": "guest",
+    "role": "salesperson",
     "resource": "Product",
     "action": "create:any",
-    "attributes": "*"
+    "attributes": "*,!orders,!nameProduct"
   },
   {
-    "role": "user",
+    "role": "admin",
     "resource": "Product",
     "action": "update:any",
     "attributes": "*"
   },
   {
-    "role": "guest",
+    "role": "salesperson",
     "resource": "Product",
     "action": "update:any",
+    "attributes": "*,!nameProduct"
+  },
+  {
+    "role": "admin",
+    "resource": "Product",
+    "action": "delete:any",
     "attributes": "*"
   },
   {
-    "role": "user",
+    "role": "salesperson",
     "resource": "Product",
     "action": "delete:any",
     "attributes": "*"
@@ -164,7 +212,13 @@
   {
     "role": "guest",
     "resource": "Product",
-    "action": "delete:any",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Product",
+    "action": "read:any",
     "attributes": "*"
   },
   {
@@ -174,7 +228,7 @@
     "attributes": "*"
   },
   {
-    "role": "guest",
+    "role": "salesperson",
     "resource": "Product",
     "action": "read:any",
     "attributes": "*"
